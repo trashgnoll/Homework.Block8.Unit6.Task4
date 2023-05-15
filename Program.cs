@@ -76,7 +76,7 @@ namespace FinalTask
                 Student[] group = groupList.ToArray();
                 foreach (Student student in group)
                 {
-                    using (StreamWriter sw = File.CreateText(Path.Combine(dirPath, student.Group)))
+                    using (StreamWriter sw = File.CreateText(Path.Combine(dirPath, student.Group + ".txt")))
                         sw.WriteLine(student.Name + ", " + student.DateOfBirth.ToString());
                 }
             }
